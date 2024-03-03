@@ -9,8 +9,18 @@
 }
 
 @font-face {
+    font-family: bengali;
+    src: url(../Fonts/L52\ Lipika\ Azhari\ Light.woff2);
+}
+
+@font-face {
     font-family: gilroy-bold;
     src: url(../Fonts/Gilroy/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: gilroy-semibold;
+    src: url(../Fonts/Gilroy/Gilroy-SemiBold.ttf);
 }
 
 @font-face {
@@ -20,12 +30,12 @@
 
 @font-face {
     font-family: gilroy;
-    src: url(../Fonts/Gilroy/Gilroy-Regular.ttf);
+    src: url(../Fonts/Gilroy/Gilroy-Regular.woff2);
 }
 
 @font-face {
-    font-family: gilroy-semibold;
-    src: url(../Fonts/Gilroy/Gilroy-SemiBold.ttf);
+    font-family: gilroy-light;
+    src: url(../Fonts/Gilroy/Gilroy-Light.ttf);
 }
 
 * {
@@ -33,6 +43,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: gilroy-mid;
+    scroll-behavior: smooth;
 }
 *::selection{
     display: none;
@@ -47,7 +58,7 @@ main {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background: #ccc;
+    background: #fffbea;
     position: relative;
 }
 .loader{
@@ -86,11 +97,15 @@ main {
 }
 .logo-nav {
     display: flex;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
     justify-content: space-between;
     align-items: flex-start;
     padding: 12px 15px;
     background: #ffae00;
     overflow-y: hidden;
+    height: calc(5vh + 24px);
 }
 
 .dflex {
@@ -123,7 +138,7 @@ main {
 .nav-content {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -181,7 +196,7 @@ nav ul li a {
     width: 100vw;
     background: white;
     display: flex;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     flex-direction: column;
@@ -202,6 +217,7 @@ nav ul li a {
     top: 18px;
     right: 15px;
     font-size: 27px;
+    cursor: pointer;
 }
 .logo{
     height: 8vh;
@@ -249,11 +265,13 @@ nav ul li a {
     border-radius: 200px;
     font-size: 20px;
     margin-top: 5vh;
+    cursor: pointer;
 }
 /*................. HERO SECTION .............*/
 #main-hero{
     /* background: #ffae00; */
-    background-image: linear-gradient(#ffae00 60%, #ddd);
+    background-image: linear-gradient(#ffae00 60%, #fffbea);
+    margin-top: calc(5vh + 24px);
     height: 92vh;
     align-items: flex-start;
     position: relative;
@@ -324,4 +342,34 @@ nav ul li a {
     display: block;
     transform: rotate(90deg);
     margin-top: 5px;
+}
+
+/*............... ABOUT Section ................*/
+.about-section{
+    background: #fffbea;
+    margin-top: 30px;
+    padding: 30px 18px;
+}
+.swagatam{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.swagatam img{
+    height: 80%;
+}
+.swagatam h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: bengali;
+    font-weight: 500;
+}
+.about-section p{
+    font-family: bengali;
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 30px;
 }
