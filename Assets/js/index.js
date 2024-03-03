@@ -1,7 +1,8 @@
 let navIcon = document.querySelector('.ri-menu-3-fill');
 let nav = document.querySelector('.nav-content');
-let signPage = document.querySelector('.signin-page');
+let navOptions = nav.querySelectorAll('li');
 let signBtn = document.querySelector('.sign-btn');
+let signPage = document.querySelector('.signin-page');
 let signPageCloseBtn = document.querySelector('#sign-page-close');
 
 signBtn.addEventListener('click', ()=>{
@@ -15,3 +16,10 @@ navIcon.addEventListener('click', (evt)=>{
     nav.classList.toggle('slideIn-RtoL');
     evt.stopPropagation();
 });
+navOptions.forEach((val)=>{
+    val.addEventListener('click', (event)=>{
+        nav.classList.remove('slideIn-RtoL');
+        navIcon.classList.remove('ri-xrp-line');
+        event.stopPropagation();
+    })
+})
