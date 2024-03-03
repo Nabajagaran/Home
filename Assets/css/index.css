@@ -64,7 +64,7 @@ main {
 .loader{
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     font-size: 60px;
     background: #f3fbff;
     top: 0;
