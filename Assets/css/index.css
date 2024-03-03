@@ -71,7 +71,7 @@ main {
     left: 0;
     padding: 12px 15px;
     font-family: logo;
-    z-index: 100;
+    z-index: 101;
     display: flex;
     justify-content: center;
     animation: fadeout 2.5s;
